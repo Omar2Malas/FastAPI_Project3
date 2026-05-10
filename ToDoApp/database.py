@@ -3,7 +3,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
-SQLALCHEMY_DATABASE_URL = 'sqlite:///./todos.db' # SQLite database URL used to connect to the database. The database file will be created in the current directory with the name 'todo.db'. The 'sqlite:///' prefix indicates that we are using SQLite as our database engine.
+SQLALCHEMY_DATABASE_URL = 'sqlite:///./todosapp.db' # SQLite database URL used to connect to the database. The database file will be created in the current directory with the name 'todo.db'. The 'sqlite:///' prefix indicates that we are using SQLite as our database engine.
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL,connect_args={'check_same_thread':False}) # the engine is used to connect the python code to the database and execute SQL statements, the connect_args={'check_same_thread':False} is used to allow multiple threads to access the database connection .
 
